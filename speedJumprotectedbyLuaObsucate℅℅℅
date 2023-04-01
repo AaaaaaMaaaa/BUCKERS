@@ -1,0 +1,19 @@
+--[[
+
+ .____                  ________ ___.    _____                           __                
+
+ |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
+
+ |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
+
+ |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
+
+ |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
+
+         \/          \/         \/    \/                \/     \/     \/                   
+
+          \_Welcome to LuaObfuscator.com   (Alpha 0.2.5) ~  Much Love, Ferib 
+
+]]--
+
+local v0=Instance.new("ScreenGui");v0.Parent=game.Players.LocalPlayer.PlayerGui;local v3=Instance.new("Frame");v3.Size=UDim2.new((1728 -740) -((992 -(321 + 646)) + (2263 -(1039 + 261))) ,200,(1000 -(980 + 20)) -0 ,(568 -238) -230 );v3.Position=UDim2.new((0.5 -0) -0 , -((2822 -(1003 + 17)) -(144 + 47 + 1511)),(1978.5 -(711 + 1267)) + (0 -0) , -(17 + 33));v3.BackgroundColor3=Color3.new(1931.5 -(971 + (2399 -(797 + 642))) ,1086.5 -((1436 -(560 + 345)) + (743 -188)) ,0.5 -(0 + 0) );v3.Parent=v0;local v8=Instance.new("TextButton");v8.Size=UDim2.new((0 -0) -(0 + 0) ,53 + 22 ,0 + (0 -0) ,(2193 -1431) -((1646 -(806 + 256)) + (924 -(504 + 292))) );v8.Position=UDim2.new((1089.1 -(988 + 101)) -(785 -(560 + 225)) ,1202 -(362 + (2260 -1420)) ,0.5 + 0 + (0 -0) , -((262 -202) -(15 + 20)));v8.BackgroundColor3=Color3.new((1332 -(512 + 820)) -(0 -0) ,(74 + 870) -((734 -332) + 177 + 364) ,0 -(0 -0) );v8.Text="Speed";v8.Parent=v3;local v14=Instance.new("TextButton");v14.Size=UDim2.new(972 -((1723 -1146) + (1685 -(401 + 889))) ,(1837 -(332 + 1334)) -(1569 -(441 + 1032)) ,(2100 -(149 + 93)) -(348 + 1136 + 374) ,11 + (329 -(35 + 255)) );v14.Position=UDim2.new(0.8, -((310 + 278) -((668 -(22 + 186)) + 53)),0.5 -(0 + 0) , -((83 + 21) -(1972 -(168 + 1725))));v14.BackgroundColor3=Color3.new((1648 -(939 + 708)) + (0 -0) ,(1427 -(355 + 540)) -((617 -(6 + 414)) + (789 -454)) ,(0 + 0) -(0 -0) );v14.Text="Jump";v14.Parent=v3;local function v20(v21)print("Button "   .. v21.Text   .. " was clicked!" );end v8.MouseButton1Click:Connect(function()game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=(1950 -(1511 + 417)) + 98 ;v20(v8);end);v14.MouseButton1Click:Connect(function()game.Players.LocalPlayer.Character.Humanoid.JumpPower=(765 -401) -244 ;v20(v14);end);local v22=Instance.new("TextButton");v22.Size=UDim2.new((0 -0) -0 ,111 -(780 -(617 + 77)) ,0 + 0 + 0 ,12 + 1 + (20 -8) );v22.Position=UDim2.new(0.95 -(1585 -(160 + 1425)) , -((1689 -(33 + 1)) -(828 + 210 + 592)),267.05 -(13 + 254) ,(1901 -(10 + 8)) -(239 + 1221 + (1826 -1403)) );v22.BackgroundColor3=Color3.new((1446 -517) -(715 + 12 + 129 + 72) ,(62 + 121) -((74 -59) + 32 + 136) ,0 + 0 );v22.Text="X";v22.Parent=v3;local function v28()v3:Destroy();end v22.MouseButton1Click:Connect(v28);
