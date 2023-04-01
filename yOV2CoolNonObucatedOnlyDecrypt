@@ -1,0 +1,323 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+
+local Window = Library.CreateLib("Chanbe", "BloodTheme")
+
+-- Tabs
+
+local Tab1 = Window:NewTab("Main")
+
+local Tab1Section = Tab1:NewSection("LocalPlayer and Everygame guis")
+
+local Tab2 = Window:NewTab("Blox Fruit")
+
+local Tab2Section = Tab2:NewSection("Hacks")
+
+local Tab3 = Window:NewTab("Bedwars")
+
+local Tab3Section = Tab3:NewSection("Hacks")
+
+local Tab4 = Window:NewTab("Animation")
+
+local Tab4Section = Tab4:NewSection("Hacks")
+
+local Tab5 = Window:NewTab("Pet Simulator X")
+
+local Tab5Section = Tab5:NewSection("Hacks")
+
+local Tab6 = Window:NewTab("SHOOTOUT")
+
+local Tab6Section = Tab6:NewSection("Hacks")
+
+local Tab7 = Window:NewTab("ClickerSim")
+
+local Tab7Section = Tab7:NewSection("Hacks")
+
+local Tab8 = Window:NewTab("Da Hood")
+
+local Tab8Section = Tab8:NewSection("Hacks")
+
+local ui_options = {
+
+	main_color = Color3.fromRGB(50, 20, 10),	min_size = Vector2.new(400, 300),
+
+	toggle_key = Enum.KeyCode.RightShift,
+
+	can_resize = true,
+
+}
+
+-- Tab1
+
+Tab1Section:NewButton("Inf Jump", "Jump inf times", function()
+
+local InfiniteJumpEnabled = true
+
+game:GetService("UserInputService").JumpRequest:connect(function()
+
+	if InfiniteJumpEnabled then
+
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+
+	end
+
+end)
+
+end)
+
+    
+
+Tab1Section:NewButton("noclip", "Go through walls", function()
+
+local Noclip = nil
+
+local Clip = nil
+
+function noclip()
+
+	Clip = false
+
+	local function Nocl()
+
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+
+					v.CanCollide = false
+
+				end
+
+			end
+
+		end
+
+		wait(0.21) -- basic optimization
+
+	end
+
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+
+end
+
+function clip()
+
+	if Noclip then Noclip:Disconnect() end
+
+	Clip = true
+
+end
+
+noclip() -- to toggle noclip() and clip()
+
+end)
+
+    
+
+Tab1Section:NewToggle("Fov", "Changes Fov", function(state)
+
+    if state then
+
+        game.Workspace.CurrentCamera.FieldOfView = 120
+
+    else
+
+        game.Workspace.CurrentCamera.FieldOfView = 80
+
+    end
+
+end)
+
+Tab1Section:NewTextBox("SpeedSetter", "Set Your WalkSpeed", function(txt)game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
+
+end)
+
+Tab1Section:NewTextBox("JumpSetter", "Set Your JumpPower", function(txt)game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
+
+end)
+
+--Tab2
+
+Tab2Section:NewButton("Neva Hub (Key needed)", "Its a op script", function()loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
+
+end)
+
+Tab2Section:NewButton("Auto chest", "Auto chest", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Chest_onoff"))() 
+
+end)
+
+Tab2Section:NewButton("Auto fruit", "Get fruits", function()Fruits = {
+
+"Human: Buddha Fruit",
+
+"Bird: Phoenix Fruit",
+
+"Rumble Fruit",
+
+"Paw Fruit",
+
+"Gravity Fruit",
+
+"Dough Fruit",
+
+"Control Fruit",
+
+"Venom Fruit",
+
+"Shadow Fruit",
+
+"Dragon Fruit" ,
+
+"Soul Fruit",
+
+"Leopard Fruit"
+
+}
+
+Valuable = {"Dough Fruit","Shadow Fruit","Venom Fruit","Control Fruit","Dragon Fruit","Soul Fruit","Leopard Fruit"} ------ it will stop the script if you got this fruit
+
+Webhook = "" --------------------------------Optional
+
+Store = true  --------------------------------Auto Store after it got the fruit
+
+Safeplace = true ----------------------------- Safeplace 
+
+Repeat = true --------------------------------- Repeat continues hopping
+
+-----------------------------------------------------------------------
+
+loadstring(game:HttpGet"https://gist.githubusercontent.com/NotHubris/4e6fdc88d84c30afa9b28c590f273bbf/raw")()
+
+    print("Clicked")
+
+end)
+
+Tab2Section:NewButton("Speed Hub", "Op script", function()loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Script--Game/main/Script%20Game"))()
+
+end)
+
+Tab3Section:NewButton("Keyboard", "Make a keyboard on your screen", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+
+end)
+
+Tab3Section:NewButton("Vapev4 Gui press the button in the gui", "", function()
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Vapev4", "DarkTheme")
+
+local Tab = Window:NewTab("Open")
+
+local Section = Tab:NewSection("Vapev4")
+
+Section:NewButton("Vapev4", "", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+
+    print("Clicked")
+
+Section:NewToggle("Spam" , "Opens Spam",function()while true do wait(1) 
+
+local A_1 = "Sub To Chanbe" local A_2 = "All" 
+
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) end
+
+end)
+
+end)
+
+end)
+
+Tab4Section:NewButton("Zombie Animation" , "Plays Zombie Animation",function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/t3yTSPRn",true))()
+
+end)
+
+Tab4Section:NewButton("Ninja Animation","Plays Ninja Animation",function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/bwGLPVV7",true))()
+
+end)
+
+Tab4Section:NewButton("Robot Animation","Plays Robot Animation",function()
+
+local Animate =
+
+game.Players.LocalPlayer.Character.Animate
+
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616088211"
+
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616089559"
+
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616095330"
+
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616091570"
+
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616090535"
+
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616086039"
+
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616087089"
+
+end)
+
+Tab4Section:NewButton("Toy Animation","Opens Toy Animation",function()
+
+local Animate =
+
+game.Players.LocalPlayer.Character.Animate
+
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782845736"
+
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=782843345"
+
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=782842708"
+
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=782847020"
+
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=782843869"
+
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=782846423"
+
+end)
+
+ Tab5Section:NewButton("Jmes", "Op", function()loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/jmesfo0/RobloxScripts/main/psx-jmes.lua"))() 
+
+end)
+
+Tab5Section:NewButton("mzlff", "Op", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/mzlf/Hub/main/PsxScript"))()
+
+end)
+
+Tab6Section:NewButton("SHOOTOUT gui", "Op", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/HELLLO1073/RobloxStuff/main/Shoot-Destroyer", true))()
+
+end)
+
+Tab6Section:NewButton("SHOOTOUT aimbot", "Op", function() 
+
+local a = require(game:GetService("ReplicatedFirst")["_0xS0URC3X"].Shared.AimAssistSettings)
+
+a.MaxScreenCoverage = 999999
+
+a.MaxKDR = 99999999.99999999
+
+a.MaxRange = 999999999
+
+end)
+
+Tab7Section:NewButton("AutoFarm", "Op", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraIsMe/ToraIsMe/main/0clicker", true))()
+
+end)
+
+Tab7Section:NewButton("Clicker Sim Auto click", "Autoclick", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Kederal/script.gg/main/loader.lua"))()
+
+end)
+
+Tab8Section:NewButton("Da hood Script", "Op", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Allvideo/test/main/Whitelist.txt"))()
+
+end)
+
+Tab1Section:NewButton("Remote Spy", "Op", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/harisprofanny/d/main/Protected.lua%20(22).txt"))()
+
+end)
