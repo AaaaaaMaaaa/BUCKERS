@@ -1,0 +1,561 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+local Window = Rayfield:CreateWindow({
+
+   Name = "Chanbe New Hub",
+
+   LoadingTitle = "Loading...",
+
+   LoadingSubtitle = "By Chanbe",
+
+   ConfigurationSaving = {
+
+      Enabled = true,
+
+      FolderName = nil, -- Create a custom folder for your hub/game
+
+      FileName = "Big Hub"
+
+   },
+
+   Discord = {
+
+      Enabled = true,
+
+      Invite = "Kju4fzHQQC", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+
+      RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+
+   },
+
+   KeySystem = true, -- Set this to true to use our key system
+
+   KeySettings = {
+
+      Title = "Chanbe Hub",
+
+      Subtitle = "Key System",
+
+      Note = "Join the discord",
+
+      FileName = "SiriusKey",
+
+      SaveKey = true,
+
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+
+      Key = "96BC13225AFD7DF91EF8CF74C9773"
+
+   }
+
+})
+
+local Tab1 = Window:CreateTab("Main", 4483362458) -- Title, Image
+
+local Tab2 = Window:CreateTab("Blox Fruit", 4483362458) -- Title, Image
+
+local Tab3 = Window:CreateTab("Bedwars", 4483362458) -- Title, Image
+
+local Tab4 = Window:CreateTab("Animation", 4483362458) -- Title, Image
+
+local Tab5 = Window:CreateTab("SHOOTOUT", 4483362458) -- Title, Image
+
+local Tab6 = Window:CreateTab("PSX", 4483362458) -- Title, Image
+
+local Tab7 = Window:CreateTab("Clicker Simulator", 4483362458) -- Title, Image
+
+local Tab8 = Window:CreateTab("Da Hood", 4483362458) -- Title, Image
+
+local Tab9 = Window:CreateTab("My Other Scripts", 4483362458) -- Title, Image
+
+local Tab10 = Window:CreateTab("Ohio", 4483362458) -- Title, Image
+
+local Tab11 = Window:CreateTab("For Scripting Hacks", 4483362458) -- Title, Image
+
+local Tab12 = Window:CreateTab("Mining Simulator", 4483362458) -- Title, Image
+
+local Tab13 = Window:CreateTab("FE scripts", 4483362458) -- Title, Image
+
+local Tab14 = Window:CreateTab("Other Hubs", 4483362458) -- Title, Image
+
+local Tab15 = Window:CreateTab("Game Scripts", 4483362458) -- Title, Image
+
+local Tab16 = Window:CreateTab("Soon", 4483362458) -- Title, Image
+
+--Tab1
+
+local Button = Tab1:CreateButton({
+
+   Name = "Inf Jump",
+
+   Callback = function()
+
+   local InfiniteJumpEnabled = true
+
+game:GetService("UserInputService").JumpRequest:connect(function()
+
+	if InfiniteJumpEnabled then		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+
+	end
+
+end)
+
+   -- The function that takes place when the button is pressed
+
+   end,
+
+})
+
+local Button = Tab1:CreateButton({
+
+   Name = "NoClip",
+
+   Callback = function()
+
+   local Noclip = nil
+
+local Clip = nil
+
+function noclip()
+
+	Clip = false
+
+	local function Nocl()
+
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+
+					v.CanCollide = false
+
+				end
+
+			end
+
+		end
+
+		wait(0.21) -- basic optimization
+
+	end
+
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+
+end
+
+function clip()
+
+	if Noclip then Noclip:Disconnect() end
+
+	Clip = true
+
+end
+
+noclip() -- to toggle noclip() and clip()
+
+   -- The function that takes place when the button is pressed
+
+   end,
+
+})
+
+local Button = Tab1:CreateButton({
+
+   Name = "Fly Gui",
+
+   Callback = function()
+
+   loadstring(game:HttpGet("https://pastebin.com/raw/67GKWVsa"))();
+
+   -- The function that takes place when the button is pressed
+
+   end,
+
+})
+
+local Input = Tab1:CreateInput({
+
+   Name = "Speed Inputter",
+
+   PlaceholderText = "Enter",
+
+   RemoveTextAfterFocusLost = true,
+
+   Callback = function(Text)game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = text
+
+   -- The function that takes place when the input is changed
+
+   -- The variable (Text) is a string for the value in the text box
+
+   end,
+
+})
+
+local Input = Tab1:CreateInput({
+
+   Name = "Jump Inputter",
+
+   PlaceholderText = "Enter",
+
+   RemoveTextAfterFocusLost = true,
+
+   Callback = function(Text)game.Players.LocalPlayer.Character.Humanoid.JumpPower = text
+
+   -- The function that takes place when the input is changed
+
+   -- The variable (Text) is a string for the value in the text box
+
+   end,
+
+})
+
+local Button = Tab1:CreateButton({
+
+   Name = "ESP",
+
+   Callback = function()
+
+   game.StarterGui:SetCore("SendNotification", {
+
+    Title = "ESP";
+
+    Text = "Made By Chanbe"; -- what the text says (ofc)
+
+    Duration = 30;
+
+})
+
+wait(1)
+
+game.StarterGui:SetCore("SendNotification", {
+
+    Title = "Enjoy";
+
+    Text = "Don't Forget to Subscribe to Chanbe"; -- what the text says (ofc)
+
+    Duration = 30;
+
+})
+
+local Duration = 1
+
+wait(Duration)
+
+local Players = game:GetService("Players"):GetChildren()
+
+local RunService = game:GetService("RunService")
+
+local highlight = Instance.new("Highlight")
+
+highlight.Name = "Highlight"
+
+for i, v in pairs(Players) do
+
+    repeat wait() until v.Character
+
+    if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+
+        local highlightClone = highlight:Clone()
+
+        highlightClone.Adornee = v.Character
+
+        highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+
+        highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+
+        highlightClone.Name = "Highlight"
+
+    end
+
+end
+
+game.Players.PlayerAdded:Connect(function(player)
+
+    repeat wait() until player.Character
+
+    if not player.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+
+        local highlightClone = highlight:Clone()
+
+        highlightClone.Adornee = player.Character
+
+        highlightClone.Parent = player.Character:FindFirstChild("HumanoidRootPart")
+
+        highlightClone.Name = "Highlight"
+
+    end
+
+end)
+
+game.Players.PlayerRemoving:Connect(function(playerRemoved)
+
+    playerRemoved.Character:FindFirstChild("HumanoidRootPart").Highlight:Destroy()
+
+end)
+
+RunService.Heartbeat:Connect(function()
+
+    for i, v in pairs(Players) do
+
+        repeat wait() until v.Character
+
+        if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+
+            local highlightClone = highlight:Clone()
+
+            highlightClone.Adornee = v.Character
+
+            highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+
+            highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+
+            highlightClone.Name = "Highlight"
+
+            task.wait()
+
+        end
+
+end
+
+end)
+
+   -- The function that takes place when the button is pressed
+
+   end,
+
+}) 
+
+--Tab2
+
+local Button = Tab:CreateButton({
+
+   Name = "Sonic Hub",
+
+   Callback = function()
+
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/NickelHUBB/SonicTuru/main/Protected-25.lua"))()
+
+   -- The function that takes place when the button is pressed
+
+   end,
+
+})
+
+local Button = Tab:CreateButton({
+
+   Name = "NubHub",
+
+   Callback = function()
+
+loadstring(game:HttpGet('https://rawscripts.net/raw/UPDATE-16-Blox-Fruits-Nub-V1-Hub-4583'))()
+
+   -- The function that takes place when the button is pressed
+
+   end,
+
+})
+
+local Button = Tab:CreateButton({
+
+   Name = "Vellerius hub",
+
+   Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/pjv/main/000000018.lua"))()
+
+wait()
+
+setclipboard("ttps://discord.gg/drs5SKaBH8")
+
+wait()
+
+Rayfield:Notify({
+
+   Title = "Copied",
+
+   Content = "Copied To Get The Key",
+
+   Duration = 6.5,
+
+   Image = 4483362458,
+
+   Actions = { -- Notification Buttons
+
+      Ignore = {
+
+         Name = "Okay!",
+
+         Callback = function()
+
+         print("The user tapped Okay!")
+
+      end
+
+   },
+
+},
+
+})
+
+   -- The function that takes place when the button is pressed
+
+   end,
+
+})
+
+local Button = Tab:CreateButton({
+
+   Name = "Chest Collector",
+
+   Callback = function()
+
+   _G.Type ="all" -- 1, 2, 3, or all
+
+_G.Maxtime = 60 --max amount of time collecting a single chest
+
+_G.DivisonAmount = 150 -- i would keep it at this as its not detected, lower = slower, higher = faster 
+
+local ts = game:GetService("TweenService")
+
+local plr = game.Players.LocalPlayer
+
+local function char()
+
+    return plr.Character
+
+end
+
+local amounts = {
+
+    ["Attempted"] = 0,
+
+    ["Completed"] = 0,
+
+    ["Failed"] = 0,
+
+    ["ToFar"] = 0
+
+}
+
+for i,v in pairs(game.Workspace:GetChildren()) do
+
+    local plrmoney = plr.Data.Beli.Value
+
+    if (_G.Type == "all" and string.find(v.Name,"Chest")) or (_G.Type == 1 and string.find(v.Name,"Chest1")) or (_G.Type == 2 and string.find(v.Name,"Chest2")) or (_G.Type == 3 and string.find(v.Name,"Chest3")) then
+
+        local dist = (char().HumanoidRootPart.Position - v.Position).Magnitude/_G.DivisonAmount
+
+        amounts["Attempted"] = amounts["Attempted"]+1
+
+        if dist < _G.Maxtime then
+
+        local twe = ts:Create(char().HumanoidRootPart,TweenInfo.new(dist,Enum.EasingStyle.Linear),{CFrame = v.CFrame}):Play()
+
+        print("attempting",v:GetFullName(),"distance is",dist)
+
+        wait(dist)
+
+        firetouchinterest(char().Head,v,0)
+
+        if plr.Data.Beli.Value == plrmoney then
+
+            amounts["Failed"] = amounts["Failed"]+1
+
+        else
+
+            amounts["Completed"] = amounts["Completed"]+1
+
+        end
+
+        else
+
+            print("ignoring",v:GetFullName(),"distance to far("..dist..")")
+
+            amounts["ToFar"] = amounts["ToFar"]+1
+
+        end
+
+    end
+
+end
+
+for i,v in pairs(amounts) do
+
+    print(i,v)
+
+end
+
+print('failed could be inaccurate!!')
+
+   -- The function that takes place when the button is pressed
+
+   end,
+
+})
+
+local Button = Tab:CreateButton({
+
+   Name = "Fruit Collector",
+
+   Callback = function()
+
+   "Human: Buddha Fruit",
+
+"Bird: Phoenix Fruit",
+
+"Rumble Fruit",
+
+"Paw Fruit",
+
+"Gravity Fruit",
+
+"Dough Fruit",
+
+"Control Fruit",
+
+"Venom Fruit",
+
+"Shadow Fruit",
+
+"Dragon Fruit" ,
+
+"Soul Fruit",
+
+"Leopard Fruit"
+
+}
+
+Valuable = {"Dough Fruit","Shadow Fruit","Venom Fruit","Control Fruit","Dragon Fruit","Soul Fruit","Leopard Fruit"} ------ it will stop the script if you got this fruit
+
+Webhook = "" --------------------------------Optional
+
+Store = true  --------------------------------Auto Store after it got the fruit
+
+Safeplace = true ----------------------------- Safeplace 
+
+Repeat = true --------------------------------- Repeat continues hopping
+
+-----------------------------------------------------------------------
+
+loadstring(game:HttpGet"https://gist.githubusercontent.com/NotHubris/4e6fdc88d84c30afa9b28c590f273bbf/raw")()
+
+   -- The function that takes place when the button is pressed
+
+   end,
+
+})
+
+local Button = Tab:CreateButton({
+
+   Name = "Neva Hub",
+
+   Callback = function()
+
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
+
+   -- The function that takes place when the button is pressed
+
+   end,
+
+})
